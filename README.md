@@ -29,7 +29,7 @@ pip3 openbadges_bakery
 ### 手元の環境
 
 下記の4つのファイルを data/ へ置いて、make run を実行する。
-csvにはheaderありが望ましい。dialect を推定しているので、windowsのExcelでもいけると思う。
+csvにはheaderありが必須です。dialect='execl' を推定しているので、windowsのExcelでもいけると思う。
 
 - Assertions.csv
 - BadgeClass.csv
