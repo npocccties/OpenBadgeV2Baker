@@ -4,11 +4,22 @@
 
 ```
 + data
+  入力データ置き場。下記の4点のファイルを置いておくこと
+  - バッジの画像ファイル png または svg
+  - Assertions.csv
+  - BadgeClass.csv
+  - Issuer.csv
++ output
+  ここには何も置かない。手元でこのプログラムを動かす時には、Assertions.csvの行に従って、順番にディレクトリが作られ、
+	- Assertion.json
+	- BakedBadge.(png|svg)
+	が作成される。
+　output 直下には、BadgeClass.json と Issuer.json が作成される。
 + tests テスト用データ
 	- unittest は、python3標準のunittestを利用している。
 	- unittest利用時は、.profileにexport PYTHONPATH=/home/yabuki/src/OpenBadgeV2 などと書いて置くこと
 + Makefile makeコマンドで実行、unittest, clean などが実行できる。使い方は src/OpenBadgeV2 で make とだけ打って helpを出せ
-+ BakeBadgeV2.py モジュール。Docstringつけているから見よ。
++ BakeBadgeV2.py モジュール。何をやっているかDocstringをつけているから見てください。
 ```
 
 ## 追加モジュール
@@ -25,6 +36,12 @@ pip3 openbadges_bakery
 ```
 
 ## 使い方
+
+make ファイルをタスク・ランナーとして利用している。
+
+dataディレクトリにデータ一式を用意したら、make run を実行する。すると、output ディレクトリにデータが生成されている。
+
+もう一度実行するなら、make clean でいったんデータを消去してから、再度 make run すること。
 
 ### 手元の環境
 
