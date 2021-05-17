@@ -63,6 +63,7 @@ jobs:
           mkdir BakedData
           pwd
           ls -la
+          cat -n /home/runner/.local/lib/python3.8/site-packages/openbadges_bakery/utils.py
           make testrun
           cp OpenBadgeBake.log BakedData/
           cp -a output/* BakedData/
