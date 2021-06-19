@@ -1,8 +1,8 @@
 name: testrun Bake-Open-Digital-BadgeV2
 on:
-  # 完成時には、pushをトリガとする。
+  # 起動テストは、UTCの月曜日から金曜日まで一日一回とする。
   schedule:
-    - cron: '*/20 * * * *'
+    - cron: '* * * * mon-fri'
 jobs:
   main:
     name: Bake Digital Badge
