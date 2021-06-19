@@ -1,6 +1,6 @@
 name: Bake-Open-Digital-BadgeV2 on push
 on: 
-  push
+  push:
     paths:
       - 'data/**'
       # dataディレクトリにデータが push されたときだけ動くように
